@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //深拷贝assign
+        /* let name = 'ls';
+        let obj = {
+            name: "zs",
+            like() {
+                alert(1234)
+            }
+        };
+        let obj1 = {
+            name: "we",
+        }
+        let obj2 = {
+            name: "ls",
+        }
+        let obj3 = Object.assign(obj,obj1,obj2);
+        //继承方法
+        let obj4 = Object.create(obj3)
+        console.log(obj4); */
+        /* let obj = {
+            eat(){
+                return "egg"
+            }
+        }
+        const today = Object.create(obj);
+        console.log(Object.getPrototypeOf(today) == obj);
+        Object.setPrototypeOf(today,obj);
+        console.log(today.eat) */
+        /* const dinner = {
+            eat(){
+                return "egg"
+            }
+        };
+        const obj = {
+            __proto__:dinner,
+            eat(){
+                //return super.eat();
+                return "蛋糕"
+            }
+        };
+        console.log(obj.eat()); 
+        
+        
+        
+        
+        
+        */
+
+
+
+
+
+
+
+
+
+        /* class Person {
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+                this.like = [];
+            }
+            set fn(str){
+                return this.like.push(str)
+            }
+            get fn(){
+                return this.like;
+            }
+            say(){
+                return `我叫${this.name}今年${this.age}岁`
+            }
+        }
+        const user = new Person("zs",15)
+        user.fn = '肉';
+        user.fn = '肉肉';
+        console.log(user.fn) */
+        /* let fn =  new class{
+            constructor(a){
+                this.a = a;
+            }
+            like(){
+                console.log(this.b)
+            }
+        }
+        fn.like(); */
+        //new.target 的使用方法
+        /* function Per(name){
+            if(new.target !== undefined){
+                this.name = name;
+                //console.log(this.name)
+            }else{
+                throw new Error("不成功")
+            }
+        };
+        console.log(Per(132)); */
+        /* function sayName(name){
+            this.name = name;
+            this.say = () => {
+                return this.name;
+            }
+        };
+        function Am(name){
+            sayName.call(this,name);
+        }
+        let name = new Am('zs');
+        console.log(name); */
+        /* var fn = () => {
+            console.log(this);
+        }
+        fn(); */
+        /* let timer = null;
+            function fn() {
+                setTimeout(() => {
+                    console.log(this)
+                })
+            }
+        fn(); */
+        /* class proson{
+            constructor(name){
+                this.name = name;
+            }
+            say(){
+                alert(this.name)
+            }
+        }
+        class name extends proson{
+            constructor(name){
+                super(name);
+            }
+        }
+        const main = new name("zs");
+        main.say(); */
+        /* const str = new Set("applyapp");
+        console.log(str.size);
+        console.log(str.has('a'));
+        console.log(str.delete("app"));
+        str.forEach(items=>console.log(items));
+        console.log(str); */
+        /* const food = new Map()
+        const cake = 123
+        const rou = "sss"
+        const fn = ()=>{}
+        food.set(cake,cake);
+        food.set(rou,"aaa");
+        food.set(fn,fn);
+        console.log(food.get(fn)) */
+        /* function add(a,b){
+            return a+b;
+        };
+        var arr = [4,100];
+        console.log(add(...arr)) */
+        /* console.log([1,2,3,4,5].copyWithin(0,3,3)) */
+        /* let arr = [1,2,3,4,5];
+        arr.fill(1);
+        console.log(arr); */
+        console.log(typeof Object.assign(null))
+    </script>
+</body>
+</html>

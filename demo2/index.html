@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    //一、整理继承方法
+        //1、通过Object.create()来继承但是这个有问题
+        //2、通过Object.setPrototypeOf()来继承
+        //3、对象内的__proto__
+        //4、extends来实现class的继承
+    //二、深拷贝
+        //1、$.extends()
+        //2、Object.assign()
+        //3、JSON.parse(JSON.stringify())
+    //三、数组复制
+        //1、[...]
+        //2、slice()
+        //3、空数组concat()
+    //四、
+        class bawei {
+            constructor(name) {
+                this.name = name;
+                this.age = null;
+
+            }
+            set fn(num) {
+                this.age = num;
+                return this.age;
+            }
+            get fn() {
+                return this.age
+            }
+
+            static say() {
+                return "你好！！！"
+            }
+            sayName() {
+                return `我叫${this.name}今年${this.age}`
+            }
+        }
+        let baweiSchool = new bawei("zs");
+        baweiSchool.fn = 18;
+        baweiSchool.newAge = 20;
+        console.log(baweiSchool.newAge)
+        console.log(baweiSchool.sayName());
+        class wz extends bawei {
+            constructor(name) {
+                super(name)
+            }
+        }
+        let wzSchool = new wz('ls');
+        wzSchool.fn = 20;
+        console.log(wzSchool.sayName());
+    </script>
+</body>
+
+</html>

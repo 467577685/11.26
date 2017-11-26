@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <script>
+        class Dom{
+            constructor(attr){
+                this.attr = attr;
+            }
+            ele(){
+                return document.getElementsByClassName(this.attr)
+            }
+        }
+        let dom = new Dom('box');
+        console.log(dom.ele());
+        Array.prototype.inArray = function(index){
+            for(var i=0;i<this.length;i++){
+                if(index == this[i]){
+                    return i;
+                }
+            }
+            return -1;
+        }
+        let arr = [1,2,3,4,5];
+        console.log(arr.inArray(5));
+    </script>
+</body>
+</html>
